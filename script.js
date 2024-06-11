@@ -1,6 +1,6 @@
 const container = document.querySelector("div.container");
 const page = document.querySelector("div.page");
-const btn = document.querySelector("button");
+const btnResize = document.querySelector("button.resize");
 
 let size = 16;
 
@@ -60,5 +60,5 @@ function createGrid(size) {
 };
 
 
-btn.addEventListener("click",resize);
+btnResize.addEventListener("click",resize);
 createGrid(size);
