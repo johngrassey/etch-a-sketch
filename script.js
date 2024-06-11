@@ -20,9 +20,29 @@ function addColumns(rows) {
 
 };
 
+function hover() {
+
+    const cells = document.querySelectorAll("div.column");
+
+    cells.forEach((cell) => {
+        cell.addEventListener("mouseenter", () => {
+        cell.classList.add("color");
+        });
+    });
+};
+
 
 addRows();
 
 const rows = document.querySelectorAll(".row");
-
 addColumns(rows);
+
+
+
+hover();
+
+// cells.forEach((cell) => {
+//     cell.addEventListener("mouseenter", () => {
+//         cell.classList.add("color");
+//     });
+// });

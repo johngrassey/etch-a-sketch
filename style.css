@@ -9,6 +9,7 @@ div#container {
     flex-direction: column;
     height: 750px;
     width: 750px;
+    justify-content: center;
 }
 
 div.row {
@@ -18,4 +19,8 @@ div.row {
 
 div.column {
     flex: 1;
+}
+
+.color {
+    background-color: gray;
 }
