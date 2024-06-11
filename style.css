@@ -3,6 +3,17 @@ body {
     background-color: lightcyan;
 }
 
+button {
+    margin: 0px 20px 20px 20px;
+    padding: 15px;
+    border-radius: 4px;
+    color: white;
+    background-color: navy;
+    border-style: none;
+    cursor: pointer;
+    font-weight: 700;
+}
+
 div.page {
     display: flex;
     width: auto;
@@ -12,7 +23,7 @@ div.page {
     flex-direction: column;
 }
 
-div#container {
+div.container {
     display: flex;
     flex-direction: column;
     height: 600px;
