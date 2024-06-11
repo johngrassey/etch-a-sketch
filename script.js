@@ -37,12 +37,5 @@ addRows();
 const rows = document.querySelectorAll(".row");
 addColumns(rows);
 
-
-
 hover();
 
-// cells.forEach((cell) => {
-//     cell.addEventListener("mouseenter", () => {
-//         cell.classList.add("color");
-//     });
-// });
