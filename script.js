@@ -1,8 +1,16 @@
 const container = document.querySelector("div.container");
 const page = document.querySelector("div.page");
+
 const btnResize = document.querySelector("button.resize");
+btnResize.addEventListener("click",resize);
+
+const btnRainbowMode = document.querySelector("button.rainbowmode");
+btnRainbowMode.addEventListener("click",rainbow);
+
+const btnShadingMode = document.querySelector("button.shadingmode");
 
 let size = 16;
+let gameMode = "normal";
 
 function addRows(size) {
     for (i=1;i<=size;i++) {
@@ -59,6 +67,27 @@ function createGrid(size) {
     hover();
 };
 
+// RAINBOW MODE
 
-btnResize.addEventListener("click",resize);
+function rainbow() {
+
+    const cells = document.querySelectorAll("div.column");
+
+    cells.forEach((cell) => {
+        cell.classList.remove("color");
+        cell.style.backgroundColor = "white";
+
+        cell.addEventListener("mouseenter", () => {
+        let r = Math.floor(Math.random() * 255).toString();
+        let g = Math.floor(Math.random() * 255).toString();
+        let b = Math.floor(Math.random() * 255).toString();
+
+        cell.style.backgroundColor = ("rgb(" + r + ", " + g + ", " + b + ")");
+
+        });
+    });
+};
+
+// RUN THE GAME
+
 createGrid(size);
