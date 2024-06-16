@@ -8,6 +8,7 @@ const btnRainbowMode = document.querySelector("button.rainbowmode");
 btnRainbowMode.addEventListener("click",rainbow);
 
 const btnShadingMode = document.querySelector("button.shadingmode");
+btnShadingMode.addEventListener("click",shading);
 
 let size = 16;
 let gameMode = "normal";
@@ -40,7 +41,7 @@ function hover() {
 
     cells.forEach((cell) => {
         cell.addEventListener("mouseenter", () => {
-        cell.classList.add("color");
+        cell.style.backgroundColor = "darkslategray";
         });
     });
 };
@@ -74,7 +75,6 @@ function rainbow() {
     const cells = document.querySelectorAll("div.column");
 
     cells.forEach((cell) => {
-        cell.classList.remove("color");
         cell.style.backgroundColor = "white";
 
         cell.addEventListener("mouseenter", () => {
@@ -86,6 +86,26 @@ function rainbow() {
 
         });
     });
+};
+
+// SHADING MODE
+
+function shading() {
+
+    const cells = document.querySelectorAll("div.column");
+
+    cells.forEach((cell) => {
+        cell.style.backgroundColor = "white";
+        cell.style.opacity = 0;
+
+        cell.addEventListener("mouseenter", () => {
+        
+        cell.style.backgroundColor = "darkslategray";
+        cell.style.opacity = Number(cell.style.opacity) + .1;
+
+        });
+    });
+
 };
 
 // RUN THE GAME
